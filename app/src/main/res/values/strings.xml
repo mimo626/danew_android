@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">danew</string>
+    <string name="hint_id">이메일 입력해 주세요</string>
+    <string name="hint_paasword">비밀번호를 입력해 주세요</string>
+    <string name="hint_name">이름을 입력해 주세요</string>
+    <string name="hint_age">나이를 입력해 주세요</string>
+    <string name="button_save_user">저장</string>
+    <string name="label_name">이름</string>
+    <string name="label_id">이메일</string>
+    <string name="label_password">비밀번호</string>
+    <string name="label_age">나이</string>
+    <string name="toolbar_signup">회원가입</string>
 </resources>
