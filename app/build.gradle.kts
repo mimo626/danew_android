@@ -45,4 +45,7 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+    // 🔽 Retrofit 추가
+    implementation(libs.retrofit)
+    implementation(libs.retrofit.gson)
 }
