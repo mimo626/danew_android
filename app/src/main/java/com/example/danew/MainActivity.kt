@@ -53,18 +53,18 @@ class MainActivity : AppCompatActivity() {
 
 
             val user = User()
-            user.id = id
+            user.userId = id
             user.password = password
             user.name = name
             user.age = age
             authAPI.save(user)
                 .enqueue(object : Callback<User?> {
                     override fun onResponse(call: Call<User?>, response: Response<User?>) { // 저장이 되었다면
-                        Toast.makeText(
-                            this@MainActivity,
-                            "Save Success",
-                            Toast.LENGTH_LONG
-                        ).show()
+                        if(response.isSuccessful) {
+                            Toast.makeText(this@MainActivity, "Save Success", Toast.LENGTH_LONG).show()
+                        } else {
+                            Toast.makeText(this@MainActivity, "Save Failed: ${response.code()}", Toast.LENGTH_LONG).show()
+                        }
                     }
 
                     override fun onFailure(call: Call<User?>, t: Throwable) { // 저장이 실패했다면
